@@ -1,0 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Simulated blood flow data (replace with actual sensor data)
+time = np.linspace(0, 10, 1000)  # Time in seconds
+blood_flow = np.sin(time) + np.random.normal(0, 0.1, len(time))  # Simulated blood flow signal
+
+# Plot the blood flow data
+plt.figure(figsize=(10, 5))
+plt.plot(time, blood_flow, label='Blood Flow')
+plt.xlabel('Time (s)')
+plt.ylabel('Blood Flow (arbitrary units)')
+plt.title('Blood Flow Measurement')
+plt.legend()
+plt.show()
+
+# Calculate basic statistics
+mean_flow = np.mean(blood_flow)
+std_flow = np.std(blood_flow)
+
+print(f'Mean Blood Flow: {mean_flow:.2f}')
+print(f'Standard Deviation of Blood Flow: {std_flow:.2f}')
